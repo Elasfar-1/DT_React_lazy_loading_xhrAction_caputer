@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-export default function Delayed (){
+export default function Slower (){
   
     const [txt, setTxt] = useState(null);
 
@@ -8,9 +8,9 @@ export default function Delayed (){
         
         if (txt === null){
             
-                let delayedRequest = fetch("https://hub.dummyapis.com/delay?seconds=3")
+                let delayedRequest = fetch("https://hub.dummyapis.com/delay?seconds=5")
                 .then((response)=>response.text())
-                .then((data)=>{console.log("finished api calls");setTxt(data);})
+                .then((data)=>{console.log("finished slower api calls");setTxt(data);})
             
         }
     },[])

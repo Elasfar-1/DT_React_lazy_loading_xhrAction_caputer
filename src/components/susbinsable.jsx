@@ -1,24 +1,16 @@
 import { useEffect, useState } from "react";
-import Delayed from "./Delayed";
 import { Suspense } from "react";
-import React from "react";
-import { isLast } from "../utils";
-
+import DTActionController from "./DTActionController.jsx";
 export default function Susbinsable({children}) {
     console.log("in Suspense");
     const actionID = dtrum.enterAction('xhr',null,null, window.location.pathname);
-    const [resolvedAll, setResolvedAll] = useState(children.map((child)=>false)); 
-    const newChildren = children.map((child)=>
-    React.cloneElement(child, {
-        resloveList:resolvedAll,
-         onResolve:setResolvedAll,
-         resolveCheck: isLast, 
-         actionID: actionID
-        })
-    ); 
-    console.log(resolvedAll);
+    console.log("susbinable children",children)
     return (<Suspense fallback={<p>...loading</p>}>
-          {newChildren}
+          <DTActionController actionID={actionID}>
+            <>
+              {children}
+            </>
+          </DTActionController>
     </Suspense>)
   
 }

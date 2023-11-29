@@ -1,15 +1,6 @@
 import { useEffect } from "react";
 export default function Bigtext({resloveList, onResolve, resolveCheck, actionID}){
-    let last; 
-    useEffect(()=>{
-        last = resolveCheck(resloveList, onResolve);
-        if (last){
-            console.log(actionID);
-            console.log("last"); 
-            dtrum.leaveAction(actionID)
-
-        }
-    })
+   console.log("BigTest is working")
     
     return (
     
