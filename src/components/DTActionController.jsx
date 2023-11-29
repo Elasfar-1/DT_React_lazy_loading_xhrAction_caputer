@@ -5,7 +5,6 @@ export default function DTActionController({children, actionID}){
     dtrum.leaveAction(actionID); 
     console.log("left action " + actionID + " here")
   });
-  console.log("Action controller children",children)
     
     return (
         <>

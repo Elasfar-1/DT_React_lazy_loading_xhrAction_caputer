@@ -10,7 +10,7 @@ export default function Delayed (){
             
                 let delayedRequest = fetch("https://hub.dummyapis.com/delay?seconds=3")
                 .then((response)=>response.text())
-                .then((data)=>{console.log("finished api calls");setTxt(data);})
+                .then((data)=>{console.log("Delayes: finished api calls");setTxt(data);})
             
         }
     },[])

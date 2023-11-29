@@ -10,7 +10,7 @@ export default function Slower (){
             
                 let delayedRequest = fetch("https://hub.dummyapis.com/delay?seconds=5")
                 .then((response)=>response.text())
-                .then((data)=>{console.log("finished slower api calls");setTxt(data);})
+                .then((data)=>{console.log("Slower: finished api calls");setTxt(data);})
             
         }
     },[])
