@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Slower from "./Slower";
 export default function Delayed (){
   
     const [txt, setTxt] = useState(null);
@@ -15,8 +16,16 @@ export default function Delayed (){
         }
     },[])
                     
-
-    return (<p>
-        {txt}
-    </p>)
+    if (txt){
+        return (
+        <>
+        <p>{txt}</p>
+        <Slower/>
+        </>
+      
+        )
+    }
+    // return (<p>
+    //     {txt}
+    // </p>)
 }

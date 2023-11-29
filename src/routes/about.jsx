@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Susbinsable from "../components/susbinsable";
 import { lazy } from "react";
-import Slower from "../components/Slower";
 export default function About(){
     const Delayed = lazy(()=> delayForDemo(import("../components/Delayed"))); 
     const Bigtext = lazy(()=> delayForDemo(import("../components/Bigtext"))); 
@@ -12,7 +11,6 @@ export default function About(){
         <Susbinsable>
                 <Delayed/>
                 <Bigtext/>
-                <Slower/>
         </Susbinsable>
 
     );
