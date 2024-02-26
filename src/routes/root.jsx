@@ -17,10 +17,10 @@ export default function Root() {
                 <nav>
                     <ul>
                         <li>
-                           <Link to={'/DT_Abdo'}>Home</Link>
+                           <Link to={'/'}>Home</Link>
                         </li>
                         <li>
-                            <Link to={'/DT_Abdo_About'}>About </Link>
+                            <Link to={'/lazy'}>About </Link>
                         </li>
                     </ul>
                 </nav>

@@ -8,11 +8,11 @@ import About from './routes/about.jsx';
 
 const router = createBrowserRouter([
   {
-    path:'/DT_Abdo', 
+    path:'/', 
     element: <Root/>
   }, 
   {
-    path:'/DT_Abdo_About', 
+    path:'/lazy', 
     element: <About/>
   }
 ])
